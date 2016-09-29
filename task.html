@@ -49,21 +49,61 @@
 		//Currency Converter Part 2
 		function convertLevToEuro2(amount, currency){
 			var currencyList = [
-				{
-					type : "USD",
-					rate : 1.76 ,
+				{ 
+					type : "USD", 
+					rate : 1.76
 				},
-				type : "GBP",
-				rate : 2.03 ,
-				type : "CHF",
-				rate : 1.69 
-			]
-			return(convertLevToEuro2['currency'].rate);
+				{ 
+					type : "GBP", 
+					rate : 2.03
+				},
+				{ 
+					type : "CHF", 
+					rate : 1.69}
+				];
+				for (var i = 0; i < currencyList.length; i++) {
+					if(currencyList[i].type==currency){
+						return amount/currencyList[i].rate;
+					}else{
+						return false;
+					}
+				};
+				
 		};
-		console.log(convertLevToEuro2(USD));
+		console.log("Leva to the choosen currency: "+convertLevToEuro2(2, "USD"));
 		
-		
-		
+		//Taxis Count Calculator Part 1
+		function taxiNeeded(people){
+			var taxi = Math.floor( people / 3 );
+			if( people % 3 != 0){
+				taxi++;
+			}
+			return taxi;
+
+		};
+		console.log("Single taxi needed "+ taxiNeeded(7));
+
+		//Taxis Count Calculator Part 2
+		function taxiNeeded2(people){
+			var taxiBig = Math.floor( people / 6 ); // vzema golemite taksita
+			var taxiSmall=0;
+			var left=0;
+			var arrTaxi[0, 0];
+
+			left = people % 6;
+				if( left % 3 == 0){  // ako nqma ostatak vzema n malki taksita
+					taxiSmall = left % 3; 
+					arrTaxi[0]=taxiBig;
+					arrTaxi[1]=taxiSmall;
+					return arrTaxi;
+				}else{
+					arrTaxi[0]=taxiBig;
+					arrTaxi[1]=taxiSmall++;// ako ima ostatak vzema n+1 malki taksita
+					return arrTaxi;
+				}
+
+		};
+		console.log("Big and Small taxi needed "+ taxiNeeded2(16));
 	</script>
 </head>
 <body>
