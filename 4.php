@@ -20,9 +20,9 @@
 		//     $('.custom-popover').addClass('hidden');
 		// });
 		
-		// $(document).on('click', function(event){
-		// 	console.log();
-		// });
+		$(document).on('click', function(event){
+			$(event.target).is('.btn');
+		});
 		
 	});
 	
