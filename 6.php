@@ -7,8 +7,8 @@
 	$(document).ready(function(){
 		$("#pull-right").on("click", function(){
 			var $available = $("#available");
-			var available = $available;
-			console.log(&available);
+			// var available = $available.val();
+			console.log($available);
 
 			// $("#chosen").append(available);
 		});
@@ -19,7 +19,7 @@
 </script>
 
 	<div class="form-group col-md-6">
-		<label for="available">Available</label>
+		<label for="available">Available:</label>
 		<select multiple id="available" class="form-control">
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -42,3 +42,4 @@
 	</div>
 
 <?php require(__DIR__ . '/partials/footer.php'); ?>
+
