@@ -3,11 +3,35 @@
 <script>
 	// You should create a validation for the field:
 	// 
-	//  - When the field looses focus(the event is called 'blur'), check for the length of the name and add class "has-error" to the div.form-group if the name is less than 3 characters
+	//  - When the field looses focus(the event is called 'blur'), check for the length of the name and 
+	//    add class "has-error" to the div.form-group if the name is less than 3 characters.
 	//  - If the field has error class, remove the error class(if it's there)
 	//  - if the field has error class, and the user focuses the field, remove the error class
 	// 
 	// Here is demo of how this should work: https://youtu.be/hCqSrQXAYhw
+	$(document).ready(function(){
+
+		$("#name").blur(function(){
+			console.log("handler for .blur() called.");
+			var $name = $("#name").val().length;
+			console.log($name);
+
+			if($name<3){
+				console.log("ín the if");
+				// add class "has-error" to div.form-group
+				$(".form-group").addClass("has-error");
+			}
+		});
+
+		$("#name").focus(function(){
+			// remove lass "has-error" to div.form-group
+			if($(".form-group").hasClass("has-error")){
+				$(".form-group").removeClass("has-error");
+			}
+		});
+
+	});
+	
 </script>
 
 <style>
