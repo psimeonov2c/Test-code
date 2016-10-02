@@ -5,14 +5,13 @@
 	// Upon clicking on the "Move Selected to left", the chosen options from the right select box should be moved to the left select box
 	// Example: https://youtu.be/fryqS9skWVM
 	$(document).ready(function(){
-		$("#pull-right").on("click", function(){
-			var $available = $("#available");
-			// var available = $available.val();
-			console.log($available);
-
-			// $("#chosen").append(available);
+		$(".pull-right").on("click", function(){
+			$("#available").find("option:selected").appendTo("#chosen");
 		});
 
+		$(".pull-left").on("click", function(){
+			$("#chosen").find("option:selected").appendTo("#available");
+		});
 	});
 
 
