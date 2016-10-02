@@ -7,23 +7,14 @@
 	// See here for demo: https://www.youtube.com/watch?v=t3GSO1YMcd8
 	
 	$(document).ready(function(){
-		// $(':checkbox').on('click', function(){
-		// 	console.log('test');
-		// });
-		
-		// $('.alert').removeClass('alert-info');
-		// $('.alert').addClass('alert-danger');
-		// $('.btn').removeClass('btn-info');
-		// $('.btn').addClass('btn-danger');
-		// });
-	
-		// $(':checkbox').on('click', function(){
-		// 	// console.log( 'test' );
-		// 	var elem = $( this );
-  //   		var parrentTag = $( this ).parent().addClass("testClass");
-  //   		console.log(parrentTag);
-		// });
-	
+		$("#pull-right").on("click", function(){
+			var $available = $("#available");
+			var available = $available;
+			console.log(&available);
+
+			// $("#chosen").append(available);
+		});
+
 	});
 	
 </script>
