@@ -19,7 +19,7 @@
 </script>
 
 	<div class="form-group col-md-6">
-		<label for="available">Available:</label>
+		<label for="available">Available</label>
 		<select multiple id="available" class="form-control">
 			<option value="1">1</option>
 			<option value="2">2</option>
