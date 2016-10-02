@@ -6,6 +6,23 @@
 	//  - if the name is entered, do nothing and let submission of the form
 	// 
 	// Example here: https://youtu.be/LotykfQ5Mi4
+	$(document).ready(function(){
+
+		$("form").on("submit", function(e){
+			
+			var $name = $("#name").val().length;
+			// console.log($name);
+			if($name===0){
+				e.preventDefault();
+				window.alert("Required field!");
+			}
+			$("form").attr("action","http://2create.bg");
+			console.log("forwarding to http://2create.bg");
+		});
+
+	});
+
+
 </script>
 
 
